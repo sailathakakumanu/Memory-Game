@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>MEMORY GAME</h1> 
+    <div class="score-board">
+        <div class="score-row">
+            <p>Moves: <span id="moves">0</span></p>
+        </div>
+        <button class="play-again-btn" onclick="playAgain()">Start Again</button>
+    </div>
+    <div class="grid-container">
+        <div class="grid-item" ><img src="coverimage.jpg" id="1" alt="Cover"></div>
+        <div class="grid-item" ><img src="coverimage.jpg" id="2" alt="Cover"></div>
+        <div class="grid-item" ><img src="coverimage.jpg" id="3" alt="Cover"></div>
+        <div class="grid-item" ><img src="coverimage.jpg" id="4" alt="Cover"></div>
+        <div class="grid-item" ><img src="coverimage.jpg" id="5" alt="Cover"></div>
+        <div class="grid-item" ><img src="coverimage.jpg" id="6" alt="Cover"></div>
+        <div class="grid-item" ><img src="coverimage.jpg" id="7" alt="Cover"></div>
+        <div class="grid-item" ><img src="coverimage.jpg" id="8" alt="Cover"></div>
+        <div class="grid-item" ><img src="coverimage.jpg" id="9" alt="Cover"></div>
+        <div class="grid-item" ><img src="coverimage.jpg" id="10" alt="Cover"></div>
+        <div class="grid-item" ><img src="coverimage.jpg" id="11" alt="Cover"></div>
+        <div class="grid-item" ><img src="coverimage.jpg" id="12" alt="Cover"></div>
+        <div class="grid-item" ><img src="coverimage.jpg" id="13" alt="Cover"></div>
+        <div class="grid-item" ><img src="coverimage.jpg" id="14" alt="Cover"></div>
+        <div class="grid-item" ><img src="coverimage.jpg" id="15" alt="Cover"></div>
+        <div class="grid-item" ><img src="coverimage.jpg" id="16" alt="Cover"></div>
+    </div>
+    <div id="game-over" class="game-over" style="display: none;">
+        <h2>Game Over!</h2>
+        <p id="final-score">Score: 0</p>
+        <p id="final-moves">Moves: 0</p>
+        <p id="final-mistakes">Misses: 0</p>
+        <button onclick="playAgain()">Play Again</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
