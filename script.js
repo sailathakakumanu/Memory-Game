@@ -5,14 +5,14 @@ let matchedPairs = 0;
 let canClick = true;
 let score = 100;
 const images = [
-    "minions.jpg", "minions.jpg",
-    "doraemon.jpg", "doraemon.jpg",
-    "ashpikachu.jpg", "ashpikachu.jpg",
-    "oggy.jpg", "oggy.jpg",
-    "tom&jerry.jpg", "tom&jerry.jpg",
-    "shinchan.jpg", "shinchan.jpg",
-    "chotabheem.jpg", "chotabheem.jpg",
-    "mrbean.png", "mrbean.png"
+    "/assets/minions.jpg", "/assets/minions.jpg",
+    "/assets/doraemon.jpg", "/assets/doraemon.jpg",
+    "/assets/ashpikachu.jpg", "/assets/ashpikachu.jpg",
+    "/assets/oggy.jpg", "/assets/oggy.jpg",
+    "/assets/tom&jerry.jpg", "/assets/tom&jerry.jpg",
+    "/assets/shinchan.jpg", "/assets/shinchan.jpg",
+    "/assets/chotabheem.jpg", "/assets/chotabheem.jpg",
+    "/assets/mrbean.png", "/assets/mrbean.png"
 ];
 function fisherYatesShuffle(arr) {
     for (let i = arr.length - 1; i > 0; i--) {
@@ -28,7 +28,7 @@ shuffledImages.forEach((image, index) => {
 });
 gridItems.forEach((img) => {
     img.addEventListener('click', () => {
-        if (!canClick || !img.src.includes('coverimage.jpg')) return;
+        if (!canClick || !img.src.includes('/assets/coverimage.jpg')) return;
 
         img.src = img.dataset.image;
         selectedImages.push(img);
@@ -51,7 +51,7 @@ gridItems.forEach((img) => {
                 mistakes++;
                 score -= 2;
                 setTimeout(() => {
-                    selectedImages.forEach(img => img.src = 'coverimage.jpg');
+                    selectedImages.forEach(img => img.src = '/assets/coverimage.jpg');
                     selectedImages = [];
                     canClick = true;
                 }, 1000);
@@ -78,7 +78,7 @@ function resetGame() {
     const shuffledImages = fisherYatesShuffle([...images]);
     shuffledImages.forEach((image, index) => {
         gridItems[index].dataset.image = image;
-        gridItems[index].src = 'coverimage.jpg';
+        gridItems[index].src = '/assets/coverimage.jpg';
     });
 }
 function playAgain() {
